@@ -11,9 +11,25 @@
 
 @interface VideoViewController(VideoSkin)
 
-
-
 -(void)createVideoSkin;
+
+-(void)removeVideoSkin;
+
+
+
+-(void)createVideoTopBGView;
+
+-(void)createVideoBackView;
+
+-(void)createMenuButton;
+
+-(void)createCopyrightButton;
+
+-(void)createVideoTitle;
+
+
+-(void)createBottomView;
+
 
 
 @end

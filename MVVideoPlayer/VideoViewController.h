@@ -9,18 +9,23 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
+
+#define VideoW [UIScreen mainScreen].bounds.size.height
+#define VideoH [UIScreen mainScreen].bounds.size.width
+
+@class VideoUIObjects;
 @interface VideoViewController : UIViewController
 {
     
     MPMoviePlayerController *moviePlayer;
-    NSString                *url;
+    VideoUIObjects          *uiObjects;
 }
 
 
 
 @property(nonatomic,retain)MPMoviePlayerController *moviePlayer;
-@property(nonatomic,retain)NSString *url;
-
+@property(nonatomic,retain)NSString                *url;
+@property(nonatomic,retain)VideoUIObjects          *uiObjects;
 
 
 - (id)initWithVideoURL:(NSString *)aurl;

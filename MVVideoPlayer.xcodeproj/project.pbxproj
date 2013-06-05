@@ -17,9 +17,15 @@
 		183C720B175743BF00392813 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183C720A175743BF00392813 /* Default@2x.png */; };
 		183C720D175743BF00392813 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 183C720C175743BF00392813 /* Default-568h@2x.png */; };
 		183C72151757440E00392813 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C72141757440E00392813 /* VideoViewController.m */; };
+		184F7ACF175F06F9008A6159 /* VideoBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F7ACE175F06F9008A6159 /* VideoBack@2x.png */; };
+		184F7AE5175F1A6F008A6159 /* VideoSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F7ADE175F1A6F008A6159 /* VideoSkin.m */; };
+		184F7AE7175F1A6F008A6159 /* VideoUIObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F7AE2175F1A6F008A6159 /* VideoUIObjects.m */; };
+		184F7AE8175F1A6F008A6159 /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F7AE4175F1A6F008A6159 /* VideoView.m */; };
+		184F7AEA175F2824008A6159 /* VideoMenuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F7AE9175F2824008A6159 /* VideoMenuButton@2x.png */; };
+		184F7AEC175F2AED008A6159 /* VideoCopyrightButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F7AEB175F2AED008A6159 /* VideoCopyrightButton@2x.png */; };
+		184F7AEF175F2E2A008A6159 /* VideoAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F7AEE175F2E2A008A6159 /* VideoAction.m */; };
 		1899BD3D175877F1000E4C8C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899BD3C175877F1000E4C8C /* MediaPlayer.framework */; };
 		18EDB517175C707E000D005C /* VideoNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDB516175C707E000D005C /* VideoNotification.m */; };
-		18EDB51A175C857C000D005C /* VideoSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDB519175C857C000D005C /* VideoSkin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,11 +44,20 @@
 		183C720C175743BF00392813 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		183C72131757440E00392813 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		183C72141757440E00392813 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		184F7ACE175F06F9008A6159 /* VideoBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoBack@2x.png"; sourceTree = "<group>"; };
+		184F7ADD175F1A6F008A6159 /* VideoSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSkin.h; sourceTree = "<group>"; };
+		184F7ADE175F1A6F008A6159 /* VideoSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSkin.m; sourceTree = "<group>"; };
+		184F7AE1175F1A6F008A6159 /* VideoUIObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUIObjects.h; sourceTree = "<group>"; };
+		184F7AE2175F1A6F008A6159 /* VideoUIObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUIObjects.m; sourceTree = "<group>"; };
+		184F7AE3175F1A6F008A6159 /* VideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoView.h; sourceTree = "<group>"; };
+		184F7AE4175F1A6F008A6159 /* VideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoView.m; sourceTree = "<group>"; };
+		184F7AE9175F2824008A6159 /* VideoMenuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoMenuButton@2x.png"; sourceTree = "<group>"; };
+		184F7AEB175F2AED008A6159 /* VideoCopyrightButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoCopyrightButton@2x.png"; sourceTree = "<group>"; };
+		184F7AED175F2E2A008A6159 /* VideoAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAction.h; sourceTree = "<group>"; };
+		184F7AEE175F2E2A008A6159 /* VideoAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoAction.m; sourceTree = "<group>"; };
 		1899BD3C175877F1000E4C8C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		18EDB515175C707E000D005C /* VideoNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoNotification.h; sourceTree = "<group>"; };
 		18EDB516175C707E000D005C /* VideoNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoNotification.m; sourceTree = "<group>"; };
-		18EDB518175C857C000D005C /* VideoSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSkin.h; sourceTree = "<group>"; };
-		18EDB519175C857C000D005C /* VideoSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSkin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +78,8 @@
 		183C71EA175743BF00392813 = {
 			isa = PBXGroup;
 			children = (
+				184F7ACD175F06F9008A6159 /* VideoPhoto */,
 				183C71FC175743BF00392813 /* MVVideoPlayer */,
-				183C71F5175743BF00392813 /* Frameworks */,
 				183C71F4175743BF00392813 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,19 +101,22 @@
 				183C71FA175743BF00392813 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		183C71FC175743BF00392813 /* MVVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				184F7ADC175F1A6F008A6159 /* VideoUI */,
 				183C7205175743BF00392813 /* AppDelegate.h */,
 				183C7206175743BF00392813 /* AppDelegate.m */,
-				18EDB518175C857C000D005C /* VideoSkin.h */,
-				18EDB519175C857C000D005C /* VideoSkin.m */,
+				184F7AED175F2E2A008A6159 /* VideoAction.h */,
+				184F7AEE175F2E2A008A6159 /* VideoAction.m */,
 				18EDB515175C707E000D005C /* VideoNotification.h */,
 				18EDB516175C707E000D005C /* VideoNotification.m */,
 				183C72131757440E00392813 /* VideoViewController.h */,
 				183C72141757440E00392813 /* VideoViewController.m */,
+				183C71F5175743BF00392813 /* Frameworks */,
 				183C71FD175743BF00392813 /* Supporting Files */,
 			);
 			path = MVVideoPlayer;
@@ -116,6 +134,30 @@
 				183C720C175743BF00392813 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		184F7ACD175F06F9008A6159 /* VideoPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				184F7AEB175F2AED008A6159 /* VideoCopyrightButton@2x.png */,
+				184F7AE9175F2824008A6159 /* VideoMenuButton@2x.png */,
+				184F7ACE175F06F9008A6159 /* VideoBack@2x.png */,
+			);
+			name = VideoPhoto;
+			path = MVVideoPlayer/VideoPhoto;
+			sourceTree = "<group>";
+		};
+		184F7ADC175F1A6F008A6159 /* VideoUI */ = {
+			isa = PBXGroup;
+			children = (
+				184F7ADD175F1A6F008A6159 /* VideoSkin.h */,
+				184F7ADE175F1A6F008A6159 /* VideoSkin.m */,
+				184F7AE1175F1A6F008A6159 /* VideoUIObjects.h */,
+				184F7AE2175F1A6F008A6159 /* VideoUIObjects.m */,
+				184F7AE3175F1A6F008A6159 /* VideoView.h */,
+				184F7AE4175F1A6F008A6159 /* VideoView.m */,
+			);
+			path = VideoUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +215,9 @@
 				183C7209175743BF00392813 /* Default.png in Resources */,
 				183C720B175743BF00392813 /* Default@2x.png in Resources */,
 				183C720D175743BF00392813 /* Default-568h@2x.png in Resources */,
+				184F7ACF175F06F9008A6159 /* VideoBack@2x.png in Resources */,
+				184F7AEA175F2824008A6159 /* VideoMenuButton@2x.png in Resources */,
+				184F7AEC175F2AED008A6159 /* VideoCopyrightButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +232,10 @@
 				183C7207175743BF00392813 /* AppDelegate.m in Sources */,
 				183C72151757440E00392813 /* VideoViewController.m in Sources */,
 				18EDB517175C707E000D005C /* VideoNotification.m in Sources */,
-				18EDB51A175C857C000D005C /* VideoSkin.m in Sources */,
+				184F7AE5175F1A6F008A6159 /* VideoSkin.m in Sources */,
+				184F7AE7175F1A6F008A6159 /* VideoUIObjects.m in Sources */,
+				184F7AE8175F1A6F008A6159 /* VideoView.m in Sources */,
+				184F7AEF175F2E2A008A6159 /* VideoAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

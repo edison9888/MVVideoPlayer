@@ -30,10 +30,11 @@
     
     
     UINavigationController *nc = [[UINavigationController alloc] init];
-    VideoViewController *vc = [[VideoViewController alloc] initWithVideoURL:@"http://3g.118100.cn/mvPlay.do?type=2&url=http%3A%2F%2Fwww.yinyuetai.com%2Fvideo%2F664350"];
+    VideoViewController *vc = [[VideoViewController alloc] initWithVideoURL:@"http://3g.118100.cn/mvPlay.do?type=2&url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNTQzNTQ1NjA4.html%3Ff%3D19173059"];
     [nc pushViewController:vc animated:YES];
     [vc release];
     self.window.rootViewController = nc;
+    [nc release];
     [self.window makeKeyAndVisible];
     return YES;
 }

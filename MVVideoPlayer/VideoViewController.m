@@ -8,6 +8,10 @@
 
 #import "VideoViewController.h"
 #import "VideoNotification.h"
+#import "VideoSkin.h"
+#import "VideoUIObjects.h"
+
+
 
 @interface VideoViewController ()
 
@@ -16,9 +20,11 @@
 @implementation VideoViewController
 @synthesize moviePlayer;
 @synthesize url;
+@synthesize uiObjects;
 
 - (void)dealloc
 {
+    [uiObjects release];
     [url release];
     [moviePlayer release];
     [super dealloc];
@@ -31,9 +37,17 @@
     if (self)
     {
         self.url = aurl;
+        uiObjects = nil;
     }
     return self;
 }
+
+
+
+
+
+
+
 
 
 
@@ -42,8 +56,13 @@
     [super viewDidLoad];
     [UIApplication sharedApplication].statusBarHidden = YES;
     self.navigationController.navigationBarHidden = YES;
+   
+    self.view.frame = CGRectMake(0, 0, VideoW, VideoH);
     self.view.backgroundColor = [UIColor redColor];
-    [self createAndConfigurePlayerWithURL:self.url];
+    
+    
+    [self createVideoSkin];
+//    [self createAndConfigurePlayerWithURL:self.url];
     
 }
 
@@ -59,38 +78,32 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    float w = [UIScreen mainScreen].bounds.size.width;
-    float h = [UIScreen mainScreen].bounds.size.height;
-    
-    self.view.frame = CGRectMake(0, 0, h, w);
+    self.view.frame = CGRectMake(0, 0, VideoW, VideoH);
 }
 
 
 
 -(void)createAndConfigurePlayerWithURL:(NSString *)aurl
 {
+
+        
     float w = [UIScreen mainScreen].bounds.size.width;
     float h = [UIScreen mainScreen].bounds.size.height;
-    
     
     MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:aurl]];
     self.moviePlayer = player; [player release];
     self.moviePlayer.controlStyle = MPMovieControlStyleNone;
-//    self.moviePlayer.controlStyle = MPMovieControlStyleDefault;
+//    self.moviePlayer.controlStyle = MPMovieControlStyleFullscreen;
     [moviePlayer setFullscreen:YES animated:YES];
     
     [self installMovieNotificationObservers];
     self.moviePlayer.view.frame = CGRectMake(0, 0, h, w);
     [self.view addSubview:self.moviePlayer.view];
-    
-    
-    
-    
-    
     [moviePlayer play];
     
     
     
+    [self createVideoSkin];
     
 }
 
