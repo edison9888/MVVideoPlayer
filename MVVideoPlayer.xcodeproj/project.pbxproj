@@ -25,6 +25,15 @@
 		184F7AEC175F2AED008A6159 /* VideoCopyrightButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 184F7AEB175F2AED008A6159 /* VideoCopyrightButton@2x.png */; };
 		184F7AEF175F2E2A008A6159 /* VideoAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F7AEE175F2E2A008A6159 /* VideoAction.m */; };
 		1899BD3D175877F1000E4C8C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899BD3C175877F1000E4C8C /* MediaPlayer.framework */; };
+		189DD11E176071950039A906 /* VideoPlayButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD11D176071950039A906 /* VideoPlayButton@2x.png */; };
+		189DD120176071D60039A906 /* VideoStopButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD11F176071D60039A906 /* VideoStopButton@2x.png */; };
+		189DD12217607AE30039A906 /* VideoSoundButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD12117607AE30039A906 /* VideoSoundButton@2x.png */; };
+		189DD1251760807E0039A906 /* VideoProgressbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 189DD1241760807E0039A906 /* VideoProgressbar.m */; };
+		189DD12B176089D70039A906 /* VideoProgressbarBuffer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD126176089D70039A906 /* VideoProgressbarBuffer@2x.png */; };
+		189DD12C176089D70039A906 /* VideoProgressbarMaximumTrack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD127176089D70039A906 /* VideoProgressbarMaximumTrack@2x.png */; };
+		189DD12D176089D70039A906 /* VideoProgressbarMinimumTrack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD128176089D70039A906 /* VideoProgressbarMinimumTrack@2x.png */; };
+		189DD12E176089D70039A906 /* VideoProgressbarThumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD129176089D70039A906 /* VideoProgressbarThumb@2x.png */; };
+		189DD12F176089D70039A906 /* VideoProgressbarThumbPress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD12A176089D70039A906 /* VideoProgressbarThumbPress@2x.png */; };
 		18EDB517175C707E000D005C /* VideoNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDB516175C707E000D005C /* VideoNotification.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +65,16 @@
 		184F7AED175F2E2A008A6159 /* VideoAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAction.h; sourceTree = "<group>"; };
 		184F7AEE175F2E2A008A6159 /* VideoAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoAction.m; sourceTree = "<group>"; };
 		1899BD3C175877F1000E4C8C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		189DD11D176071950039A906 /* VideoPlayButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoPlayButton@2x.png"; sourceTree = "<group>"; };
+		189DD11F176071D60039A906 /* VideoStopButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoStopButton@2x.png"; sourceTree = "<group>"; };
+		189DD12117607AE30039A906 /* VideoSoundButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoSoundButton@2x.png"; sourceTree = "<group>"; };
+		189DD1231760807E0039A906 /* VideoProgressbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoProgressbar.h; sourceTree = "<group>"; };
+		189DD1241760807E0039A906 /* VideoProgressbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoProgressbar.m; sourceTree = "<group>"; };
+		189DD126176089D70039A906 /* VideoProgressbarBuffer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoProgressbarBuffer@2x.png"; sourceTree = "<group>"; };
+		189DD127176089D70039A906 /* VideoProgressbarMaximumTrack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoProgressbarMaximumTrack@2x.png"; sourceTree = "<group>"; };
+		189DD128176089D70039A906 /* VideoProgressbarMinimumTrack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoProgressbarMinimumTrack@2x.png"; sourceTree = "<group>"; };
+		189DD129176089D70039A906 /* VideoProgressbarThumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoProgressbarThumb@2x.png"; sourceTree = "<group>"; };
+		189DD12A176089D70039A906 /* VideoProgressbarThumbPress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoProgressbarThumbPress@2x.png"; sourceTree = "<group>"; };
 		18EDB515175C707E000D005C /* VideoNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoNotification.h; sourceTree = "<group>"; };
 		18EDB516175C707E000D005C /* VideoNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoNotification.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +158,14 @@
 		184F7ACD175F06F9008A6159 /* VideoPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				189DD126176089D70039A906 /* VideoProgressbarBuffer@2x.png */,
+				189DD127176089D70039A906 /* VideoProgressbarMaximumTrack@2x.png */,
+				189DD128176089D70039A906 /* VideoProgressbarMinimumTrack@2x.png */,
+				189DD129176089D70039A906 /* VideoProgressbarThumb@2x.png */,
+				189DD12A176089D70039A906 /* VideoProgressbarThumbPress@2x.png */,
+				189DD12117607AE30039A906 /* VideoSoundButton@2x.png */,
+				189DD11F176071D60039A906 /* VideoStopButton@2x.png */,
+				189DD11D176071950039A906 /* VideoPlayButton@2x.png */,
 				184F7AEB175F2AED008A6159 /* VideoCopyrightButton@2x.png */,
 				184F7AE9175F2824008A6159 /* VideoMenuButton@2x.png */,
 				184F7ACE175F06F9008A6159 /* VideoBack@2x.png */,
@@ -150,6 +177,8 @@
 		184F7ADC175F1A6F008A6159 /* VideoUI */ = {
 			isa = PBXGroup;
 			children = (
+				189DD1231760807E0039A906 /* VideoProgressbar.h */,
+				189DD1241760807E0039A906 /* VideoProgressbar.m */,
 				184F7ADD175F1A6F008A6159 /* VideoSkin.h */,
 				184F7ADE175F1A6F008A6159 /* VideoSkin.m */,
 				184F7AE1175F1A6F008A6159 /* VideoUIObjects.h */,
@@ -218,6 +247,14 @@
 				184F7ACF175F06F9008A6159 /* VideoBack@2x.png in Resources */,
 				184F7AEA175F2824008A6159 /* VideoMenuButton@2x.png in Resources */,
 				184F7AEC175F2AED008A6159 /* VideoCopyrightButton@2x.png in Resources */,
+				189DD11E176071950039A906 /* VideoPlayButton@2x.png in Resources */,
+				189DD120176071D60039A906 /* VideoStopButton@2x.png in Resources */,
+				189DD12217607AE30039A906 /* VideoSoundButton@2x.png in Resources */,
+				189DD12B176089D70039A906 /* VideoProgressbarBuffer@2x.png in Resources */,
+				189DD12C176089D70039A906 /* VideoProgressbarMaximumTrack@2x.png in Resources */,
+				189DD12D176089D70039A906 /* VideoProgressbarMinimumTrack@2x.png in Resources */,
+				189DD12E176089D70039A906 /* VideoProgressbarThumb@2x.png in Resources */,
+				189DD12F176089D70039A906 /* VideoProgressbarThumbPress@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +273,7 @@
 				184F7AE7175F1A6F008A6159 /* VideoUIObjects.m in Sources */,
 				184F7AE8175F1A6F008A6159 /* VideoView.m in Sources */,
 				184F7AEF175F2E2A008A6159 /* VideoAction.m in Sources */,
+				189DD1251760807E0039A906 /* VideoProgressbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

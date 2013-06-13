@@ -24,11 +24,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
  
-// http://3g.118100.cn/mvPlay.do?type=2&url=http%3A%2F%2Fv.qq.com%2Fcover%2Fr%2Frtlcx4qfw5oas30.html%3Fvid%3Di00122vhx66
-// http://3g.118100.cn/mvPlay.do?type=2&url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNTQzNTQ1NjA4.html%3Ff%3D19173059
-// http://3g.118100.cn/mvPlay.do?type=2&url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNTQzNTQ1NjA4.html%3Ff%3D19173059
-    
-    
+
     UINavigationController *nc = [[UINavigationController alloc] init];
     VideoViewController *vc = [[VideoViewController alloc] initWithVideoURL:@"http://3g.118100.cn/mvPlay.do?type=2&url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNTQzNTQ1NjA4.html%3Ff%3D19173059"];
     [nc pushViewController:vc animated:YES];

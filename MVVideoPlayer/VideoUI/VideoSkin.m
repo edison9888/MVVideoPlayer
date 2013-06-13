@@ -10,13 +10,16 @@
 #import "VideoUIObjects.h"
 #import "VideoView.h"
 #import "VideoAction.h"
+#import "VideoProgressbar.h"
 
 
 
 #define VideoBack_P                 @"VideoBack.png"
 #define VideoMenuButton_P           @"VideoMenuButton.png"
 #define VideoCopyrightButton_P      @"VideoCopyrightButton.png"
-
+#define VideoPlayButton_P           @"VideoPlayButton.png"
+#define VideoStopButton_P           @"VideoStopButton.png"
+#define VideoSoundButton_P          @"VideoSoundButton.png"
 
 @implementation VideoViewController(VideoSkin)
 
@@ -44,6 +47,12 @@
     [self createVideoTitle];
     
     [self createBottomView];
+    [self createPlayButton];
+    [self createStopButton];
+    [self createSoundButton];
+    [self createVideoProgressbar];
+    
+    self.uiObjects.stopButton.hidden = YES;
 }
 
 
@@ -185,17 +194,85 @@
 
 
 
+-(void)createPlayButton
+{
+    UIImage *tempImage = [UIImage imageNamed:VideoPlayButton_P];
+    VideoView *tempView = [[VideoView alloc] initWithFrame:CGRectMake( 15,
+                                                                      (self.uiObjects.bottomView.frame.size.height-tempImage.size.height)/2.0,
+                                                                      tempImage.size.width,
+                                                                      tempImage.size.height)
+                                                touchRange:CGRectMake( 0, VideoH-self.uiObjects.bottomView.frame.size.height,
+                                                                      tempImage.size.width+15, self.uiObjects.bottomView.frame.size.height)
+                                                     image:tempImage];
+        
+    [tempView addTarget:self action:@selector(playButtonAction) eventType:V_Down];
+    [self.uiObjects.bottomView addSubview:tempView];
+    self.uiObjects.playButton = tempView;
+    [tempView release];
+}
+
+
+
+
+-(void)createStopButton
+{
+    UIImage *tempImage = [UIImage imageNamed:VideoStopButton_P];
+    VideoView *tempView = [[VideoView alloc] initWithFrame:CGRectMake( 15,
+                                                                      (self.uiObjects.bottomView.frame.size.height-tempImage.size.height)/2.0,
+                                                                      tempImage.size.width,
+                                                                      tempImage.size.height)
+                                                touchRange:CGRectMake( 0, VideoH-self.uiObjects.bottomView.frame.size.height,
+                                                                      tempImage.size.width+15, self.uiObjects.bottomView.frame.size.height)
+                                                     image:tempImage];
+    
+    [tempView addTarget:self action:@selector(stopButtonAction) eventType:V_Down];
+    [self.uiObjects.bottomView addSubview:tempView];
+    self.uiObjects.stopButton = tempView;
+    [tempView release];
+}
+
+
+
+
+-(void)createSoundButton
+{
+    UIImage *tempImage = [UIImage imageNamed:VideoSoundButton_P];
+    VideoView *tempView = [[VideoView alloc] initWithFrame:CGRectMake( VideoW-tempImage.size.width-10,
+                                                                      (self.uiObjects.bottomView.frame.size.height-tempImage.size.height)/2.0,
+                                                                      tempImage.size.width,
+                                                                      tempImage.size.height)
+                                                touchRange:CGRectMake( VideoW-tempImage.size.width-10, VideoH-self.uiObjects.bottomView.frame.size.height,
+                                                                      tempImage.size.width+10, self.uiObjects.bottomView.frame.size.height)
+                                                     image:tempImage];
+    
+    
+
+    
+    
+    [tempView addTarget:self action:@selector(soundButtonAction) eventType:V_Down];
+    [self.uiObjects.bottomView addSubview:tempView];
+    self.uiObjects.soundButton = tempView;
+    [tempView release];
+}
 
 
 
 
 
 
-
-
-
-
-
+-(void)createVideoProgressbar
+{
+    float barW = VideoW*0.7;
+    
+    VideoProgressbar *tempView = [[VideoProgressbar alloc] initWithFrame:CGRectMake( (VideoW - barW)/2.0, 26, barW, 2)];
+    tempView.touchRange = CGRectMake( (VideoW - barW)/2.0, VideoH-self.uiObjects.bottomView.frame.size.height+26,
+                                     barW, 20);
+//    tempView.backgroundColor = [UIColor greenColor];
+    [self.uiObjects.bottomView addSubview:tempView];
+    self.uiObjects.progressbar = tempView;
+    [tempView release];
+    
+}
 
 
 

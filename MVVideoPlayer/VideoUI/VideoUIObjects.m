@@ -8,6 +8,7 @@
 
 #import "VideoUIObjects.h"
 #import "VideoView.h"
+#import "VideoProgressbar.h"
 
 @implementation VideoUIObjects
 @synthesize topBGView;
@@ -16,9 +17,17 @@
 @synthesize menuButton;
 @synthesize videoTitle;
 @synthesize bottomView;
+@synthesize playButton;
+@synthesize stopButton;
+@synthesize soundButton;
+@synthesize progressbar;
 
 - (void)dealloc
 {
+    [progressbar release];
+    [soundButton release];
+    [stopButton release];
+    [playButton release];
     [bottomView release];
     [videoTitle release];
     [copyrightButton release];
@@ -40,6 +49,11 @@
         copyrightButton = nil;
         videoTitle = nil;
         bottomView = nil;
+        playButton = nil;
+        stopButton = nil;
+        soundButton = nil;
+        progressbar = nil;
+        
     }
     return self;
 }
@@ -50,14 +64,26 @@
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
     
-    //对按钮进行特殊处理
-    if ( self.videoBack && self.videoBack.userInteractionEnabled && self.videoBack.hidden==FALSE && CGRectContainsPoint(self.videoBack.touchRange, point))
-        return self.videoBack.button;
-    if ( self.menuButton && self.menuButton.userInteractionEnabled && self.menuButton.hidden==FALSE && CGRectContainsPoint(self.menuButton.touchRange, point))
-        return self.menuButton.button;
+
     
-    if ( self.copyrightButton && self.copyrightButton.userInteractionEnabled && self.copyrightButton.hidden==FALSE && CGRectContainsPoint(self.copyrightButton.touchRange, point))
+    
+    if (self.videoBack && [self.videoBack touchResponse:point])
+            return self.videoBack.button;
+    if (self.self.menuButton && [self.self.menuButton touchResponse:point])
+        return self.menuButton.button;
+    if (self.self.self.copyrightButton && [self.self.self.copyrightButton touchResponse:point])
         return self.copyrightButton.button;
+    
+    if (self.playButton && [self.playButton touchResponse:point])
+        return self.playButton.button;
+    if (self.stopButton && [self.stopButton touchResponse:point])
+        return self.stopButton.button;
+    
+    if (self.soundButton && [self.soundButton touchResponse:point])
+        return self.soundButton.button;
+    if (self.progressbar && [self.progressbar touchResponse:point])
+        return self.progressbar.slider;
+    
     
     
     return [super hitTest:point withEvent:event];

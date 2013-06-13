@@ -18,8 +18,17 @@
 
 -(void) menuButtonAction;
 
+
 -(void) copyrightButtonAction;
 
+
+
+-(void) playButtonAction;
+
+-(void) stopButtonAction;
+
+
+-(void) soundButtonAction;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class VideoView;
+@class VideoProgressbar;
 @interface VideoUIObjects : UIView
 {
     UIView                  *topBGView;
@@ -17,6 +18,11 @@
     UILabel                 *videoTitle;             //标题
     
     UIView                  *bottomView;
+    VideoView               *playButton;
+    VideoView               *stopButton;
+    VideoView               *soundButton;
+    VideoProgressbar        *progressbar;
+    
     
 }
 
@@ -30,6 +36,10 @@
 
 
 @property(nonatomic,retain)UIView                   *bottomView;
+@property(nonatomic,retain)VideoView                *playButton;
+@property(nonatomic,retain)VideoView                *stopButton;
+@property(nonatomic,retain)VideoView                *soundButton;
+@property(nonatomic,retain)VideoProgressbar         *progressbar;
 
 
 @end

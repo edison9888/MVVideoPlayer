@@ -31,5 +31,14 @@
 -(void)createBottomView;
 
 
+-(void)createPlayButton;
+
+-(void)createStopButton;
+
+-(void)createSoundButton;
+
+-(void)createVideoProgressbar;
+
+
 
 @end

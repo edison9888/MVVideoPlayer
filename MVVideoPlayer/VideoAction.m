@@ -7,6 +7,8 @@
 //
 
 #import "VideoAction.h"
+#import "VideoUIObjects.h"
+#import "VideoView.h"
 
 @implementation VideoViewController(VideoAction)
 
@@ -29,10 +31,25 @@
 }
 
 
+-(void) playButtonAction
+{
+    self.uiObjects.playButton.hidden = YES;
+    self.uiObjects.stopButton.hidden = NO;
+    NSLog(@"播放按钮----");
+}
+
+-(void) stopButtonAction
+{
+    self.uiObjects.stopButton.hidden = YES;
+    self.uiObjects.playButton.hidden = NO;
+    NSLog(@"停止按钮---");
+}
 
 
-
-
+-(void) soundButtonAction
+{
+    NSLog(@"声音停止---");
+}
 
 
 

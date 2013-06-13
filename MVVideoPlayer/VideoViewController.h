@@ -33,6 +33,7 @@
 -(void)removeMovieViewFromViewHierarchy;
 
 
+-(void)update;
 
 
 

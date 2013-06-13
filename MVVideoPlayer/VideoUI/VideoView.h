@@ -36,13 +36,14 @@ typedef enum
 - (id)initWithFrame:(CGRect)aFrame touchRange:(CGRect )aTouchRange image:(UIImage *)aImage;
 
 
--(void)customLayout;
+- (void)customLayout;
 
 
 
 - (void)addTarget:(id)target action:(SEL)action eventType:(VideoUIEventType )type;
 
 
+- (BOOL) touchResponse:(CGPoint)point;
 
 
 

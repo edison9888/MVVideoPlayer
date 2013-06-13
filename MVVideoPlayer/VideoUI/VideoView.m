@@ -80,7 +80,13 @@
 
 
 
-
+- (BOOL) touchResponse:(CGPoint)point
+{
+    if ( self.userInteractionEnabled && self.hidden==FALSE && CGRectContainsPoint(self.touchRange, point))
+        return YES;
+    else
+        return NO;
+}
 
 
 

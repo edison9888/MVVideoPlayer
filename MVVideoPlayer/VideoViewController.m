@@ -10,6 +10,7 @@
 #import "VideoNotification.h"
 #import "VideoSkin.h"
 #import "VideoUIObjects.h"
+#import "VideoProgressbar.h"
 
 
 
@@ -61,8 +62,10 @@
     self.view.backgroundColor = [UIColor redColor];
     
     
-    [self createVideoSkin];
-//    [self createAndConfigurePlayerWithURL:self.url];
+//    [self createVideoSkin];
+    
+    [self createAndConfigurePlayerWithURL:self.url];
+    [self update];
     
 }
 
@@ -86,14 +89,14 @@
 -(void)createAndConfigurePlayerWithURL:(NSString *)aurl
 {
 
-        
+    
     float w = [UIScreen mainScreen].bounds.size.width;
     float h = [UIScreen mainScreen].bounds.size.height;
     
     MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:aurl]];
     self.moviePlayer = player; [player release];
-    self.moviePlayer.controlStyle = MPMovieControlStyleNone;
-//    self.moviePlayer.controlStyle = MPMovieControlStyleFullscreen;
+//    self.moviePlayer.controlStyle = MPMovieControlStyleNone;
+    self.moviePlayer.controlStyle = MPMovieControlStyleDefault;
     [moviePlayer setFullscreen:YES animated:YES];
     
     [self installMovieNotificationObservers];
@@ -101,14 +104,36 @@
     [self.view addSubview:self.moviePlayer.view];
     [moviePlayer play];
     
-    
-    
-    [self createVideoSkin];
-    
+        
 }
 
 
 
+-(void)update
+{
+    
+    NSArray * events = moviePlayer.accessLog.events;
+    int count = events.count;
+    for (int i = 0; i<count; i++)
+    {
+        MPMovieAccessLogEvent * currentEvent = [events objectAtIndex:i];
+        double byts = currentEvent.indicatedBitrate;
+        int64_t byte = currentEvent.numberOfBytesTransferred;
+        int64_t bytes = currentEvent.numberOfBytesTransferred >> 10;
+        NSMutableString * strBytes = [[NSMutableString alloc] initWithCapacity:100];
+        [strBytes appendFormat:@"totalSize = %lld byte",bytes];
+        if (bytes > 1024) {
+            bytes = bytes >> 10;
+            [strBytes setString:@""];
+            [strBytes appendFormat:@"total = %lld M",bytes];
+        }
+        NSLog(@"缓冲区大小 byte = %f M , 当前大小 %@ , 当前速度 = %lf",(float)byte/(1024*1024) , strBytes , byts/1024);
+    }
+    
+
+    
+    [self performSelector:@selector(update) withObject:nil afterDelay:0.05];
+}
 
 
 
